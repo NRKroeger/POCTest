@@ -1,0 +1,32 @@
+<html>
+<script src="https://revature5-dev-ed.develop.my.site.com/lightning/lightning.out.js"></script>
+<div data-lightning-out="true"></div>
+
+<script>
+const appName= 'c:PocTest';
+const componentName='c:pOcbase';
+const lightningEndpoint= 'https://revature5-dev-ed.develop.my.site.com/';
+const targetElement= document.querySelector("[data-lightning-out]");
+const componentAttributes = {};
+
+$Lightning.use(
+    appName,
+    function(){
+        $Lightning.createComponent(
+            componentName,
+            componentAttributes,
+            targetElement,
+    
+            function(cmp){
+                console.log('lightning component created');
+            }
+            );
+            },
+        lightningEndpoint
+        );
+
+</script>
+
+
+
+</html>
